@@ -1,0 +1,27 @@
+# Исключить базу данных (типовые имена файлов)
+*.sqlite3
+*.db
+*.sql
+*.sqlite
+
+# Папка .idea от JetBrains IDE (например, PyCharm)
+.idea/
+
+# Виртуальные окружения (если хранятся в папке проекта)
+venv/
+.venv/
+
+# Файлы кэша Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Логи
+*.log
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# ОС-специфичные файлы
+.DS_Store
+Thumbs.db
