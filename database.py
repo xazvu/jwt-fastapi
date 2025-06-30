@@ -16,9 +16,3 @@ def init_db():
 def delete_db():
     Base.metadata.drop_all(bind=engine)
 
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()

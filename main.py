@@ -1,15 +1,17 @@
 import uvicorn
 import models
 from fastapi import FastAPI, status, Depends, HTTPException
-from database import init_db, delete_db, get_db
+from database import init_db, delete_db
 from typing import Annotated
 from sqlalchemy.orm import Session
+from auth import get_db, router
 
 init_db()
 
 # delete_db()
 
 app = FastAPI()
+app.include_router(router)
 
 db_dependency = Annotated[Session, Depends(get_db)]
 
